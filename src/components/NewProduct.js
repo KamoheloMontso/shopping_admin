@@ -71,7 +71,7 @@ function NewProduct() {
         <input id='productId' type='text' ref={productIdRef}></input>
       </div>
 
-      <button  onClick = { addProductHandler}> add Product</button>
+      <button  onClick = { addProductHandler}>Submit</button>
     </form>
 
 

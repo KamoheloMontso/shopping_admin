@@ -1,14 +1,19 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import './App.css';
 import NewProduct from './components/NewProduct';
 import ProductList from './components/ProductList';
 
 function App() {
-
+ 
+  const  [showProductList, setShowProductList] = useState(true);
+  function addProductHandler(){
+    setShowProductList(false)
+  }
   return (
     <div>
-      <NewProduct/>
-      <ProductList/>
+      {showProductList && <ProductList/> } 
+      {!showProductList && <NewProduct/> }
+      <button  onClick = {addProductHandler}>Add Product</button>
     </div> 
 
   );
